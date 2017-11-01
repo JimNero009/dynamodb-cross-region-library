@@ -68,7 +68,7 @@ public class CommandLineArgs {
 
     public static final String DONT_PUBLISH_CLOUDWATCH = "--dontPublishCloudwatch";
     @Parameter(names = DONT_PUBLISH_CLOUDWATCH, description = "Have KCL not publish Cloudwatch metrics", hidden = true)
-    private boolean dontPublishCloudwatch = false;
+    private boolean dontPublishCloudwatch = true;
 
     public static final String BATCH_SIZE = "--batchSize";
     @Parameter(names = BATCH_SIZE, description = "Number of records to request in each DynamoDB Streams GetRecords call")

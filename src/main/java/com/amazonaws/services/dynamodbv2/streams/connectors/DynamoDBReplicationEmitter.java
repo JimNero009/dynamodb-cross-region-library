@@ -385,7 +385,8 @@ public class DynamoDBReplicationEmitter implements IEmitter<Record> {
      *            The records that failed to write to DynamoDB
      */
     protected synchronized void emitCloudWatchMetrics(final List<Record> records, final List<Record> failures, final AtomicInteger retryCount) {
-        AmazonCloudWatchAsync cloudwatch = CLOUDWATCH.get();
+        return;
+        /*AmazonCloudWatchAsync cloudwatch = CLOUDWATCH.get();
         if (null == cloudwatch) {
             return;
         }
@@ -420,7 +421,7 @@ public class DynamoDBReplicationEmitter implements IEmitter<Record> {
             public void onError(Exception exception) {
                 log.error("Could not publish metric: " + request, exception);
             }
-        });
+        });*/
     }
 
     /**

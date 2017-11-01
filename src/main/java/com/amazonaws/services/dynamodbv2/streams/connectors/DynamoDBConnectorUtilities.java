@@ -49,7 +49,7 @@ public class DynamoDBConnectorUtilities {
                                      String sourceTableName, String destinationTableName) {
         String taskName;
         if (!Strings.isNullOrEmpty(suppliedTaskName)) {
-            taskName = DynamoDBConnectorConstants.SERVICE_PREFIX + suppliedTaskName;
+            taskName = suppliedTaskName;
             if (taskName.length() > DynamoDBConnectorConstants.DYNAMODB_TABLENAME_LIMIT) {
                 throw new IllegalArgumentException("Provided taskname is too long!");
             }
